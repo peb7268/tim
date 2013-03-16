@@ -1,0 +1,68 @@
+@import url('reset.css');
+$light-blue: #3789d8;
+$dark-blue: #0c4a7f;
+$button-color: lighten($light-blue, 15%);
+$light-button: lighten($dark-blue, 20%);
+
+/*-- Mixin --------------------------------------------------------------------------------*/
+@mixin border-radius($radius){
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+}
+
+@mixin text-shadow($x-offset, $y-offset, $blur, $color){
+	text-shadow: $x-offset $y-offset $blur $color;
+	-webkit-text-shadow: $x-offset $y-offset $blur $color;
+	-moz-text-shadow: $x-offset $y-offset $blur $color;
+	-ms-text-shadow: $x-offset $y-offset $blur $color;
+}
+@mixin gradient($top-color, $bottom-color){
+	background-color: $top-color;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color));
+	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -moz-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -o-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -ms-linear-gradient(top, $top-color, $bottom-color);
+	background-image: linear-gradient(top, $top-color, $bottom-color);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color');
+}
+
+/*-- Header --------------------------------------------------------------------------------*/
+header {
+	height: 70px;
+	@include gradient($light-blue, $dark-blue);
+	border-bottom: 1px solid darken($dark-blue, 70%);
+}
+
+/*-- Nav Menu --------------------------------------------------------------------------------*/
+#navigation {
+	width: 95%;
+	margin: 0 auto;
+
+	#menu-primary-navigation-menu {
+		float: right;
+		margin: 25px 0 0 0;
+
+		li {
+			float: left;
+			margin: 0 5px 0 0;
+
+			a {
+				display: block;
+				padding: 5px 25px;
+				background: $button-color;
+				color: #fff;
+				@include border-radius(2px);
+				border: 1px solid $dark-blue;
+				@include text-shadow(0px, 1px, 1px, $dark-blue);
+				@include gradient(lighten($light-blue, 20%), lighten($dark-blue, 15%));
+				
+				&:hover {
+					@include gradient($light-blue, $dark-blue);
+				}
+			}
+		}
+	}
+}
