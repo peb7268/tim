@@ -1,0 +1,221 @@
+@import url("reset.css");
+/*-- Mixin --------------------------------------------------------------------------------*/
+/*-- Globals --------------------------------------------------------------------------------*/
+/*-- Header --------------------------------------------------------------------------------*/
+header {
+  background-color: #3789d8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3789d8), to(#012b42));
+  background-image: -webkit-linear-gradient(top, #3789d8, #012b42);
+  background-image: -moz-linear-gradient(top, #3789d8, #012b42);
+  background-image: -o-linear-gradient(top, #3789d8, #012b42);
+  background-image: -ms-linear-gradient(top, #3789d8, #012b42);
+  background-image: linear-gradient(top, #3789d8, #012b42);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color');
+  border-top: 1px solid #77afe4;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 5px 0; }
+
+/*-- Nav Menu --------------------------------------------------------------------------------*/
+#navigation {
+  width: 95%;
+  margin: 0 auto; }
+  #navigation #menu-primary-navigation-menu {
+    float: right;
+    margin: 20px 0 15px; }
+    #navigation #menu-primary-navigation-menu li {
+      float: left;
+      margin: 0 5px 0 0; }
+      #navigation #menu-primary-navigation-menu li a {
+        display: block;
+        padding: 5px 25px;
+        background: #77afe4;
+        color: #fff;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border: 1px solid #012b42;
+        text-shadow: 0px 1px 1px #012b42;
+        -webkit-text-shadow: 0px 1px 1px #012b42;
+        -moz-text-shadow: 0px 1px 1px #012b42;
+        -ms-text-shadow: 0px 1px 1px #012b42;
+        background-color: #8cbbe9;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#8cbbe9), to(#025c8d));
+        background-image: -webkit-linear-gradient(top, #8cbbe9, #025c8d);
+        background-image: -moz-linear-gradient(top, #8cbbe9, #025c8d);
+        background-image: -o-linear-gradient(top, #8cbbe9, #025c8d);
+        background-image: -ms-linear-gradient(top, #8cbbe9, #025c8d);
+        background-image: linear-gradient(top, #8cbbe9, #025c8d);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color'); }
+        #navigation #menu-primary-navigation-menu li a:hover {
+          background-color: #3789d8;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(#3789d8), to(#012b42));
+          background-image: -webkit-linear-gradient(top, #3789d8, #012b42);
+          background-image: -moz-linear-gradient(top, #3789d8, #012b42);
+          background-image: -o-linear-gradient(top, #3789d8, #012b42);
+          background-image: -ms-linear-gradient(top, #3789d8, #012b42);
+          background-image: linear-gradient(top, #3789d8, #012b42);
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color'); }
+
+/*-- Home --*/
+.blog #hero {
+  height: 200px;
+  margin: 0 0 5px 0;
+  background-image: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  box-shadow: 1px 0px 3px black; }
+  .blog #hero aside {
+    background-color: #7c7c7c;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7c7c7c), to(black));
+    background-image: -webkit-linear-gradient(top, #7c7c7c);
+    background-image: -moz-linear-gradient(top, #7c7c7c, black);
+    background-image: -o-linear-gradient(top, #7c7c7c, black);
+    background-image: -ms-linear-gradient(top, #7c7c7c, black);
+    background-image: linear-gradient(top, #7c7c7c, black);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top', EndColorStr='$bottom');
+    opacity: .9;
+    width: 23%;
+    height: 100%;
+    float: left;
+    color: white;
+    font-size: 30pt;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+    line-height: 4.1; }
+  .blog #hero > ul {
+    float: right;
+    width: 77%;
+    height: 100%; }
+    .blog #hero > ul li {
+      float: left;
+      height: 100%;
+      position: relative; }
+      .blog #hero > ul li a {
+        text-align: center;
+        line-height: 4.1;
+        display: block;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        color: white;
+        font-size: 30pt;
+        font-family: 'Open Sans Condensed', sans-serif; }
+      .blog #hero > ul li p {
+        position: relative;
+        z-index: 9; }
+      .blog #hero > ul li span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        width: 100%; }
+    .blog #hero > ul > li:nth-child(1) {
+      width: 356px; }
+      .blog #hero > ul > li:nth-child(1) a {
+        background-color: #00ab02;
+        background-image: url("../img/book.png");
+        background-repeat: no-repeat;
+        background-position: center 65%; }
+      .blog #hero > ul > li:nth-child(1) span {
+        background-color: rgba(0, 171, 2, 0.7); }
+    .blog #hero > ul > li:nth-child(2) {
+      width: 311px; }
+      .blog #hero > ul > li:nth-child(2) a {
+        background-color: #2e8af1; }
+      .blog #hero > ul > li:nth-child(2) span {
+        background-color: rgba(46, 138, 241, 0.7); }
+    .blog #hero > ul > li:nth-child(3) {
+      width: 315px; }
+      .blog #hero > ul > li:nth-child(3) a {
+        background-color: #ff5f2e;
+        background-image: url("../img/musings.png");
+        background-repeat: no-repeat;
+        background-position: center 65%; }
+      .blog #hero > ul > li:nth-child(3) span {
+        background-color: rgba(255, 95, 46, 0.7); }
+.blog #tweets {
+  background-image: url("../img/tweets-bg-white.png");
+  background-repeat: no-repeat;
+  background-position: 1% 3px;
+  color: white;
+  font-size: 28pt;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0 0 5px 0;
+  padding: 12px 0;
+  background-color: #3789d8;
+  border-top: 2px solid #012b42;
+  border-bottom: 2px solid #012b42; }
+  .blog #tweets div {
+    float: left; }
+    .blog #tweets div.left {
+      width: 65.2%;
+      margin: 0 0 0 10%; }
+      .blog #tweets div.left p {
+        text-align: left;
+        line-height: 1.6; }
+    .blog #tweets div.right {
+      width: 23.4%;
+      margin: 0;
+      border-left: 1px solid #FFF;
+      padding: 7px 0 12px 1%; }
+      .blog #tweets div.right p {
+        font-size: 20pt;
+        line-height: 1; }
+        .blog #tweets div.right p.headline {
+          font-size: 12pt;
+          margin: 0;
+          padding: 0; }
+
+/*-- #wrapper --------------------------------------------------------------------------------*/
+#wrapper-home {
+  width: 99%;
+  margin: 0 auto; }
+  #wrapper-home > aside, #wrapper-home #blog-home {
+    margin: 0px auto 5px;
+    float: left; }
+  #wrapper-home > aside {
+    width: 23%; }
+    #wrapper-home > aside h2 {
+      padding: 7px 4px;
+      background-color: #3789d8;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 22pt;
+      margin: 0 0 5px 0; }
+    #wrapper-home > aside span:nth-child(1) {
+      display: block;
+      padding: 0 0 0 4px;
+      margin: 0 0 -2px 0;
+      font-size: 9pt;
+      color: #012b42;
+      text-transform: none; }
+    #wrapper-home > aside span.brace {
+      font-size: 24pt; }
+    #wrapper-home > aside > ul li {
+      margin: 0 0 5px 0;
+      height: 370px;
+      width: 100%;
+      text-align: center; }
+      #wrapper-home > aside > ul li img {
+        display: block;
+        width: 100%;
+        max-width: 295px; }
+      #wrapper-home > aside > ul li:nth-child(2) {
+        height: 80px; }
+  #wrapper-home #blog-home {
+    width: 76%;
+    margin-left: 1%; }
+    #wrapper-home #blog-home article.post h1 {
+      background-color: #012b42;
+      padding: 10px 12px;
+      color: #FFF;
+      font-size: 26pt;
+      margin: 0 0 5px 0; }

@@ -1,0 +1,305 @@
+@import url('reset.css');
+$light-blue: #3789d8;
+//$dark-blue: #0c4a7f;
+$dark-blue: #012b42;
+$button-color: lighten($light-blue, 15%);
+$light-button: lighten($dark-blue, 20%);
+$hero-left-top: #797979;
+$hero-left-bottom: #424242;
+$hero-3: #ff5f2e;
+$hero-2: #2e8af1;
+$hero-1: #00ab02;
+
+$img-path: '../img/';
+
+/*-- Mixin --------------------------------------------------------------------------------*/
+//Fonts
+@mixin thin-font-headline($font-size, $color){
+	color: $color;
+	font-size: $font-size;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+//Utilities
+@mixin img($img-name, $bp){
+	background-image: url($img-path + $img-name);
+	background-repeat: no-repeat; 
+	background-position: $bp;
+}
+@mixin border-radius($radius){
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+}
+
+@mixin text-shadow($x-offset, $y-offset, $blur, $color){
+	text-shadow: $x-offset $y-offset $blur $color;
+	-webkit-text-shadow: $x-offset $y-offset $blur $color;
+	-moz-text-shadow: $x-offset $y-offset $blur $color;
+	-ms-text-shadow: $x-offset $y-offset $blur $color;
+}
+@mixin gradient($top-color, $bottom-color){
+	background-color: $top-color;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color));
+	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -moz-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -o-linear-gradient(top, $top-color, $bottom-color);
+	background-image: -ms-linear-gradient(top, $top-color, $bottom-color);
+	background-image: linear-gradient(top, $top-color, $bottom-color);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top-color', EndColorStr='$bottom-color');
+}
+
+/*-- Globals --------------------------------------------------------------------------------*/
+
+
+/*-- Header --------------------------------------------------------------------------------*/
+header {
+	@include gradient($light-blue, $dark-blue);
+	border-top: 1px solid lighten($light-blue, 15%);
+	border-bottom: 1px solid darken($dark-blue, 70%);
+	overflow: hidden;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+
+/*-- Nav Menu --------------------------------------------------------------------------------*/
+#navigation {
+	width: 95%;
+	margin: 0 auto;
+
+	#menu-primary-navigation-menu {
+		float: right;
+		margin: 20px 0 15px;
+
+		li {
+			float: left;
+			margin: 0 5px 0 0;
+
+			a {
+				display: block;
+				padding: 5px 25px;
+				background: $button-color;
+				color: #fff;
+				@include border-radius(2px);
+				border: 1px solid $dark-blue;
+				@include text-shadow(0px, 1px, 1px, $dark-blue);
+				@include gradient(lighten($light-blue, 20%), lighten($dark-blue, 15%));
+				
+				&:hover {
+					@include gradient($light-blue, $dark-blue);
+				}
+			}
+		}
+	}
+}
+
+/*-- Home --*/
+//change this later
+.blog {
+	
+	#hero{
+		height: 200px;
+		margin: 0 0 5px 0;
+		@include img("hero.jpg", 0 0);
+		box-shadow: 1px 0px 3px darken($dark-blue, 70%);
+
+		aside{
+			$top: lighten($hero-left-top, 1%);
+			$bottom: darken($hero-left-bottom, 45%);
+
+			background-color: $top;
+			background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom));
+			background-image: -webkit-linear-gradient(top, $top);
+			background-image: -moz-linear-gradient(top, $top, $bottom);
+			background-image: -o-linear-gradient(top, $top, $bottom);
+			background-image: -ms-linear-gradient(top, $top, $bottom);
+			background-image: linear-gradient(top, $top, $bottom);
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$top', EndColorStr='$bottom');
+			
+			opacity: .9;
+			width: 23%;
+			height: 100%;
+			float: left;
+
+			@include thin-font-headline(30pt, #fff);
+			text-shadow: 1px 1px 1px #000;
+			text-align: center;
+			line-height: 4.1;
+		}
+		& > ul{
+			float: right; 
+			width: 77%;
+			height: 100%;
+
+			li {
+				float: left;
+				height: 100%;
+				position: relative;
+				a {
+					text-align: center;
+					line-height: 4.1;
+					display: block;
+					z-index: 10;
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					@include thin-font-headline(30pt, #fff);
+				}
+				p {
+					position: relative;
+					z-index: 9;
+				}
+				span {
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
+			}
+			& >li:nth-child(1){
+				width: 356px;
+				a{
+					background-color: $hero-1;
+					@include img('book.png', center 65%);
+				}
+				span{
+					background-color: rgba($hero-1, .7);
+				}
+			}
+			& >li:nth-child(2){
+				width: 311px;
+				a{
+					background-color: $hero-2;
+				}
+				span{
+					background-color: rgba($hero-2, .7);
+				}
+			}
+			& >li:nth-child(3){
+				width: 315px;
+				a{
+					background-color: $hero-3;
+					@include img('musings.png', center 65%);
+				}
+				span{
+					background-color: rgba($hero-3, .7);
+				}
+			}
+		}
+	}
+	#tweets{
+		@include img('tweets-bg-white.png', 1% 3px);
+		@include thin-font-headline(28pt, #fff);
+		margin: 0 0 5px 0;
+		padding: 12px 0;	
+		$tweet-border-size: 2px;
+		background-color: $light-blue;
+		border-top: $tweet-border-size solid $dark-blue;
+		border-bottom: $tweet-border-size solid $dark-blue;
+		
+		div {
+			float: left;
+			&.left {
+				width: 65.2%;
+				margin: 0 0 0 10%;
+
+				p {
+					text-align: left;
+					line-height: 1.6;
+				}
+			}
+			&.right {
+				width: 23.4%;
+				margin: 0;
+				border-left: 1px solid #FFF;
+				padding: 7px 0 12px 1%;
+
+				p {
+					font-size: 20pt;
+					line-height: 1;
+					&.headline {
+						font-size: 12pt;
+						margin: 0;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-- #wrapper --------------------------------------------------------------------------------*/
+#wrapper-home {
+	width: 99%;
+	margin: 0 auto;
+
+	& > aside, #blog-home{
+		margin: 0px auto 5px;
+		float: left;
+	}
+	& > aside {
+		width: 23%;
+
+		h2 {
+			padding: 7px 4px;
+			background-color: $light-blue;
+			color: #FFF;
+			text-transform: uppercase;
+			font-size: 22pt;
+			margin: 0 0 5px 0;
+		}
+
+		span:nth-child(1){
+			display: block;
+			padding: 0 0 0 4px;
+			margin: 0 0 -2px 0;
+			font-size: 9pt;
+			color: $dark-blue;
+			text-transform: none;
+		}
+		span.brace {
+			font-size: 24pt;
+		}
+		& > ul {
+			
+			li {
+				margin: 0 0 5px 0;
+				height: 370px;
+				width: 100%;
+				text-align: center;
+
+				img {
+					display: block;
+					width: 100%;
+					max-width: 295px;
+				}
+				&:nth-child(2){
+					height: 80px;
+				}
+			}
+		}
+	}
+	#blog-home{
+		width: 76%;
+		margin-left: 1%;
+
+		article {
+
+			&.post {
+				
+				h1 {
+					background-color: $dark-blue;
+					padding: 10px 12px;
+					color: #FFF;
+					font-size: 26pt;
+					margin: 0 0 5px 0;
+				}
+			}
+		}
+	}
+}
