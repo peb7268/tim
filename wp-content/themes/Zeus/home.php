@@ -5,26 +5,18 @@
 <section id="hero" class="clearfix">
 	<aside>
 		<h2>What Im Into Lately</h2>
+		<span></span>
 	</aside>
-	<ul>
-		<li><a href="#">Books</a>
-			<p>Book 1</p>
-			<p>Book 2</p>
-			<p>Book 3</p>
-			<span></span>
-		</li>
-		<li><a href="#">Projects</a><p>Project 1</p><span></span></li>
-		<li><a href="#">Musings</a><p>Thought 1</p><span></span></li>
-	</ul>
+	<?php require_once 'framework/loops/loop-home-hero.php'; ?>
 </section><!-- #hero -->
 
 <section id="tweets" class="clearfix">
 	<div class="left">
-		<p>Living for someone else's approval is the same as #idolotry to God.</p>
-	</div>
-	<div class="right">
 		<p class="headline">Follow Me</p>
-		<p>@peb7268</p>
+		<p><a href="#">@peb7268</a></p>
+	</div>
+		<div class="right">
+			<p>Living for someone else's approval is the same as #idolotry to God.</p>
 	</div>
 </section><!-- #tweets -->
 
@@ -50,13 +42,7 @@
 		</ul>
 	</aside>
 	<section id="blog-home">
-		<article class="post">
-			<h1>Why did I feel the need for a redesign?</h1>
-			<p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. 
-				Etiam at risus et justo dignissim congue. Donec congue lacinia dui, 
-				a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
-			</p>
-		</article>
+		<?php require_once 'framework/loops/loop-home.php'; ?>
 	</section><!-- #blog-home -->
 </div><!-- #wrapper -->
 

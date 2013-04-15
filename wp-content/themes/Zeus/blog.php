@@ -1,7 +1,10 @@
+<?php
+	/* Template Name: blog */
+?>
 <?php get_header(); ?>
-<div id="wrapper-page">
+<div id="wrapper-blog">
 	<div id="body">
-		<div id="single-header">
+		<div id="blog-header">
 			<h1 id="title"><?php the_title(); ?></h1>
 		</div><!-- #singel-header -->
 		<?php the_content(); ?>

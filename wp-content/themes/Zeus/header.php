@@ -15,6 +15,10 @@
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/home.js"></script>
 </head>
 <body <?php body_class() ?>>
-<header class="clearfix">
-	<?php wp_nav_menu( array('theme_location'  => 'Primary', 'container_id' => 'navigation') ); ?> 
-</header>
+<div id="wrapper" class="clearfix">
+	<header class="clearfix">
+		<?php wp_nav_menu( array('theme_location'  => 'Primary', 'container_id' => 'navigation') ); ?> 
+		<h1>
+			<span>Welcome To</span> Imperative Design
+		</h1>
+	</header>
