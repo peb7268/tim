@@ -1,8 +1,8 @@
-#wrapper-home {
+#wrapper-home, #wrapper-blog {
 	width: 99%;
 	margin: 0 auto;
 
-	& > aside, #blog-home{
+	& > aside, #blog-home {
 		margin: 0px auto 5px;
 		float: left;
 	}
@@ -50,7 +50,7 @@
 			}
 		}
 	}
-	#blog-home{
+	#blog-home, #blog{
 		width: 76%;
 		margin-left: 1%;
 
@@ -69,8 +69,20 @@
 					font-size: 26pt;
 					margin: 0 0 5px 0;
 					a { color: #fff; }
+					a:hover { color: saturate($hero-3, 100%); }
 				}
 			}
 		}
+	}
+	#blog article.post h1 {
+		background-color: #fff;
+		padding: 0;
+		margin: 0 0 2px 0;
+		font-weight: bold;
+		font-size: 20pt;
+		a { color: $dark-blue; }
+	}
+	#blog {
+		width: 99%;
 	}
 }

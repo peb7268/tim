@@ -11,8 +11,7 @@
 	<title>Page Title</title>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/lib/jquery.js"></script>
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/home.js"></script>
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>
 <div id="wrapper" class="clearfix">

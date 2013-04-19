@@ -19,13 +19,31 @@ body {
     #navigation-footer li a {
       color: #3789d8; }
 
+#body, #blog, #sidebar {
+  padding: 23px 10px;
+  box-sizing: border-box; }
+
 #sidebar {
-  width: 22%;
+  width: 24%;
   min-height: 400px;
   float: right;
   background: #fff;
-  border-radius: 0 7px 7px 0;
-  padding: 23px 10px 0; }
+  border-radius: 0 7px 7px 0; }
+  #sidebar #search #s, #sidebar #search #submit {
+    margin: 0;
+    padding: 5px 2px;
+    float: left;
+    font-size: 10pt; }
+  #sidebar #search #s {
+    width: 68%;
+    border: 1px solid #999;
+    margin-right: 5px; }
+  #sidebar #search #submit {
+    width: 25%;
+    padding: 5px 2px 6px;
+    color: #fff;
+    background-color: #012b42;
+    border: 1px solid #000a10; }
 
 /*-- Header --------------------------------------------------------------------------------*/
 header {
@@ -212,15 +230,15 @@ header {
         line-height: 1; }
 
 /*-- Page Specific Styles ------------------------------------------------------------*/
-#wrapper-home {
+#wrapper-home, #wrapper-blog {
   width: 99%;
   margin: 0 auto; }
-  #wrapper-home > aside, #wrapper-home #blog-home {
+  #wrapper-home > aside, #wrapper-home #blog-home, #wrapper-blog > aside, #wrapper-blog #blog-home {
     margin: 0px auto 5px;
     float: left; }
-  #wrapper-home > aside {
+  #wrapper-home > aside, #wrapper-blog > aside {
     width: 23%; }
-    #wrapper-home > aside h2 {
+    #wrapper-home > aside h2, #wrapper-blog > aside h2 {
       padding: 7px 4px;
       background-color: #3789d8;
       color: #FFF;
@@ -228,68 +246,109 @@ header {
       font-size: 22pt;
       margin: 0 0 5px 0;
       height: 46px; }
-    #wrapper-home > aside span:nth-child(1) {
+    #wrapper-home > aside span:nth-child(1), #wrapper-blog > aside span:nth-child(1) {
       display: block;
       padding: 0 0 0 4px;
       margin: 0 0 -2px 0;
       font-size: 9pt;
       color: #012b42;
       text-transform: none; }
-    #wrapper-home > aside span.brace {
+    #wrapper-home > aside span.brace, #wrapper-blog > aside span.brace {
       font-size: 24pt; }
-    #wrapper-home > aside > ul li {
+    #wrapper-home > aside > ul li, #wrapper-blog > aside > ul li {
       margin: 0 0 5px 0;
       height: 275px;
       width: 100%;
       background: #fff;
       text-align: center; }
-      #wrapper-home > aside > ul li img {
+      #wrapper-home > aside > ul li img, #wrapper-blog > aside > ul li img {
         display: block;
         width: 100%;
         max-width: 295px; }
-      #wrapper-home > aside > ul li:nth-child(2) {
+      #wrapper-home > aside > ul li:nth-child(2), #wrapper-blog > aside > ul li:nth-child(2) {
         height: 80px; }
-  #wrapper-home #blog-home {
+  #wrapper-home #blog-home, #wrapper-home #blog, #wrapper-blog #blog-home, #wrapper-blog #blog {
     width: 76%;
     margin-left: 1%; }
-    #wrapper-home #blog-home article {
+    #wrapper-home #blog-home article, #wrapper-home #blog article, #wrapper-blog #blog-home article, #wrapper-blog #blog article {
       background-color: #fff;
       padding: 5px;
       margin: 0 auto 5px;
       min-height: 78px; }
-      #wrapper-home #blog-home article.post h1 {
+      #wrapper-home #blog-home article.post h1, #wrapper-home #blog article.post h1, #wrapper-blog #blog-home article.post h1, #wrapper-blog #blog article.post h1 {
         background-color: #012b42;
         padding: 10px 12px;
         color: #FFF;
         font-size: 26pt;
         margin: 0 0 5px 0; }
-        #wrapper-home #blog-home article.post h1 a {
+        #wrapper-home #blog-home article.post h1 a, #wrapper-home #blog article.post h1 a, #wrapper-blog #blog-home article.post h1 a, #wrapper-blog #blog article.post h1 a {
           color: #fff; }
+        #wrapper-home #blog-home article.post h1 a:hover, #wrapper-home #blog article.post h1 a:hover, #wrapper-blog #blog-home article.post h1 a:hover, #wrapper-blog #blog article.post h1 a:hover {
+          color: #ff5f2e; }
+  #wrapper-home #blog article.post h1, #wrapper-blog #blog article.post h1 {
+    background-color: #fff;
+    padding: 0;
+    margin: 0 0 2px 0;
+    font-weight: bold;
+    font-size: 20pt; }
+    #wrapper-home #blog article.post h1 a, #wrapper-blog #blog article.post h1 a {
+      color: #012b42; }
+  #wrapper-home #blog, #wrapper-blog #blog {
+    width: 99%; }
 
-#wrapper-single, #wrapper-page {
+#wrapper-single, #wrapper-page, #wrapper-blog {
   width: 75%;
   float: left;
   margin-right: 5px; }
-  #wrapper-single #body, #wrapper-page #body {
+  #wrapper-single #body, #wrapper-single #blog, #wrapper-page #body, #wrapper-page #blog, #wrapper-blog #body, #wrapper-blog #blog {
     background: #fff;
     min-height: 400px;
-    border-radius: 0 0 0px 7px;
-    padding: 20px 10px; }
-    #wrapper-single #body #single-header h1#title, #wrapper-page #body #single-header h1#title {
-      color: #335533;
+    border-radius: 0 0 0px 7px; }
+    #wrapper-single #body #single-header h1#title, #wrapper-single #body #blog-header h1#title, #wrapper-single #blog #single-header h1#title, #wrapper-single #blog #blog-header h1#title, #wrapper-page #body #single-header h1#title, #wrapper-page #body #blog-header h1#title, #wrapper-page #blog #single-header h1#title, #wrapper-page #blog #blog-header h1#title, #wrapper-blog #body #single-header h1#title, #wrapper-blog #body #blog-header h1#title, #wrapper-blog #blog #single-header h1#title, #wrapper-blog #blog #blog-header h1#title {
+      color: #333333;
       font-size: 24pt;
       font-family: 'Open Sans Condensed', sans-serif;
       margin: 0 0 5px 0; }
-    #wrapper-single #body #single-header .meta, #wrapper-page #body #single-header .meta {
-      border: 1px solid #999;
+    #wrapper-single #body #single-header #banner img, #wrapper-single #body #blog-header #banner img, #wrapper-single #blog #single-header #banner img, #wrapper-single #blog #blog-header #banner img, #wrapper-page #body #single-header #banner img, #wrapper-page #body #blog-header #banner img, #wrapper-page #blog #single-header #banner img, #wrapper-page #blog #blog-header #banner img, #wrapper-blog #body #single-header #banner img, #wrapper-blog #body #blog-header #banner img, #wrapper-blog #blog #single-header #banner img, #wrapper-blog #blog #blog-header #banner img {
+      max-width: 100%; }
+    #wrapper-single #body #single-header .meta, #wrapper-single #body #blog-header .meta, #wrapper-single #blog #single-header .meta, #wrapper-single #blog #blog-header .meta, #wrapper-page #body #single-header .meta, #wrapper-page #body #blog-header .meta, #wrapper-page #blog #single-header .meta, #wrapper-page #blog #blog-header .meta, #wrapper-blog #body #single-header .meta, #wrapper-blog #body #blog-header .meta, #wrapper-blog #blog #single-header .meta, #wrapper-blog #blog #blog-header .meta {
+      border: 1px solid #000a10;
       color: #eee;
-      padding: 5px 4px;
-      background: #333;
-      min-height: 16px;
-      max-width: 75.5%; }
-      #wrapper-single #body #single-header .meta a, #wrapper-page #body #single-header .meta a {
+      margin: 15px 0 25px;
+      padding: 3px 4px 1px;
+      background: #012b42;
+      height: 24px;
+      overflow: hidden;
+      max-width: 92%;
+      line-height: 1.5; }
+      #wrapper-single #body #single-header .meta a, #wrapper-single #body #blog-header .meta a, #wrapper-single #blog #single-header .meta a, #wrapper-single #blog #blog-header .meta a, #wrapper-page #body #single-header .meta a, #wrapper-page #body #blog-header .meta a, #wrapper-page #blog #single-header .meta a, #wrapper-page #blog #blog-header .meta a, #wrapper-blog #body #single-header .meta a, #wrapper-blog #body #blog-header .meta a, #wrapper-blog #blog #single-header .meta a, #wrapper-blog #blog #blog-header .meta a {
         color: #3789d8; }
+      #wrapper-single #body #single-header .meta iframe, #wrapper-single #body #blog-header .meta iframe, #wrapper-single #blog #single-header .meta iframe, #wrapper-single #blog #blog-header .meta iframe, #wrapper-page #body #single-header .meta iframe, #wrapper-page #body #blog-header .meta iframe, #wrapper-page #blog #single-header .meta iframe, #wrapper-page #blog #blog-header .meta iframe, #wrapper-blog #body #single-header .meta iframe, #wrapper-blog #body #blog-header .meta iframe, #wrapper-blog #blog #single-header .meta iframe, #wrapper-blog #blog #blog-header .meta iframe {
+        float: right;
+        margin-top: 1px; }
+        #wrapper-single #body #single-header .meta iframe #widget, #wrapper-single #body #blog-header .meta iframe #widget, #wrapper-single #blog #single-header .meta iframe #widget, #wrapper-single #blog #blog-header .meta iframe #widget, #wrapper-page #body #single-header .meta iframe #widget, #wrapper-page #body #blog-header .meta iframe #widget, #wrapper-page #blog #single-header .meta iframe #widget, #wrapper-page #blog #blog-header .meta iframe #widget, #wrapper-blog #body #single-header .meta iframe #widget, #wrapper-blog #body #blog-header .meta iframe #widget, #wrapper-blog #blog #single-header .meta iframe #widget, #wrapper-blog #blog #blog-header .meta iframe #widget {
+          float: right; }
+    #wrapper-single #body p, #wrapper-single #blog p, #wrapper-page #body p, #wrapper-page #blog p, #wrapper-blog #body p, #wrapper-blog #blog p {
+      margin: 0 auto 15px; }
+    #wrapper-single #body .content, #wrapper-single #blog .content, #wrapper-page #body .content, #wrapper-page #blog .content, #wrapper-blog #body .content, #wrapper-blog #blog .content {
+      width: 95%;
+      margin: 0 0 0 0; }
 
+.page-template-blog-php #wrapper-blog #blog .post .img {
+  float: left;
+  background: #333;
+  width: 29%;
+  height: 150px; }
+  .page-template-blog-php #wrapper-blog #blog .post .img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    max-height: 180px; }
+.page-template-blog-php #wrapper-blog #blog .post .content {
+  float: right;
+  width: 70%; }
+
+/*-- Media Queries -------------------------------------------------------------------*/
 @media all and (max-width: 1270px) {
   body {
     /* background: blue; */ }
@@ -301,29 +360,43 @@ header {
     line-height: 1.1; }
     .blog #hero aside h2 {
       padding: 0px 0 0 0; }
-  .blog #hero #wrapper-single, .blog #hero #wrapper-page {
+  .blog #hero #wrapper-single, .blog #hero #wrapper-page, .blog #hero #wrapper-blog {
     width: 75%;
     float: left;
     margin-right: 5px; }
-    .blog #hero #wrapper-single #body, .blog #hero #wrapper-page #body {
+    .blog #hero #wrapper-single #body, .blog #hero #wrapper-single #blog, .blog #hero #wrapper-page #body, .blog #hero #wrapper-page #blog, .blog #hero #wrapper-blog #body, .blog #hero #wrapper-blog #blog {
       background: #fff;
       min-height: 400px;
-      border-radius: 0 0 0px 7px;
-      padding: 20px 10px; }
-      .blog #hero #wrapper-single #body #single-header h1#title, .blog #hero #wrapper-page #body #single-header h1#title {
-        color: #335533;
+      border-radius: 0 0 0px 7px; }
+      .blog #hero #wrapper-single #body #single-header h1#title, .blog #hero #wrapper-single #body #blog-header h1#title, .blog #hero #wrapper-single #blog #single-header h1#title, .blog #hero #wrapper-single #blog #blog-header h1#title, .blog #hero #wrapper-page #body #single-header h1#title, .blog #hero #wrapper-page #body #blog-header h1#title, .blog #hero #wrapper-page #blog #single-header h1#title, .blog #hero #wrapper-page #blog #blog-header h1#title, .blog #hero #wrapper-blog #body #single-header h1#title, .blog #hero #wrapper-blog #body #blog-header h1#title, .blog #hero #wrapper-blog #blog #single-header h1#title, .blog #hero #wrapper-blog #blog #blog-header h1#title {
+        color: #333333;
         font-size: 24pt;
         font-family: 'Open Sans Condensed', sans-serif;
         margin: 0 0 5px 0; }
-      .blog #hero #wrapper-single #body #single-header .meta, .blog #hero #wrapper-page #body #single-header .meta {
-        border: 1px solid #999;
+      .blog #hero #wrapper-single #body #single-header #banner img, .blog #hero #wrapper-single #body #blog-header #banner img, .blog #hero #wrapper-single #blog #single-header #banner img, .blog #hero #wrapper-single #blog #blog-header #banner img, .blog #hero #wrapper-page #body #single-header #banner img, .blog #hero #wrapper-page #body #blog-header #banner img, .blog #hero #wrapper-page #blog #single-header #banner img, .blog #hero #wrapper-page #blog #blog-header #banner img, .blog #hero #wrapper-blog #body #single-header #banner img, .blog #hero #wrapper-blog #body #blog-header #banner img, .blog #hero #wrapper-blog #blog #single-header #banner img, .blog #hero #wrapper-blog #blog #blog-header #banner img {
+        max-width: 100%; }
+      .blog #hero #wrapper-single #body #single-header .meta, .blog #hero #wrapper-single #body #blog-header .meta, .blog #hero #wrapper-single #blog #single-header .meta, .blog #hero #wrapper-single #blog #blog-header .meta, .blog #hero #wrapper-page #body #single-header .meta, .blog #hero #wrapper-page #body #blog-header .meta, .blog #hero #wrapper-page #blog #single-header .meta, .blog #hero #wrapper-page #blog #blog-header .meta, .blog #hero #wrapper-blog #body #single-header .meta, .blog #hero #wrapper-blog #body #blog-header .meta, .blog #hero #wrapper-blog #blog #single-header .meta, .blog #hero #wrapper-blog #blog #blog-header .meta {
+        border: 1px solid #000a10;
         color: #eee;
-        padding: 5px 4px;
-        background: #333;
-        min-height: 16px;
-        max-width: 75.5%; }
-        .blog #hero #wrapper-single #body #single-header .meta a, .blog #hero #wrapper-page #body #single-header .meta a {
+        margin: 15px 0 25px;
+        padding: 3px 4px 1px;
+        background: #012b42;
+        height: 24px;
+        overflow: hidden;
+        max-width: 92%;
+        line-height: 1.5; }
+        .blog #hero #wrapper-single #body #single-header .meta a, .blog #hero #wrapper-single #body #blog-header .meta a, .blog #hero #wrapper-single #blog #single-header .meta a, .blog #hero #wrapper-single #blog #blog-header .meta a, .blog #hero #wrapper-page #body #single-header .meta a, .blog #hero #wrapper-page #body #blog-header .meta a, .blog #hero #wrapper-page #blog #single-header .meta a, .blog #hero #wrapper-page #blog #blog-header .meta a, .blog #hero #wrapper-blog #body #single-header .meta a, .blog #hero #wrapper-blog #body #blog-header .meta a, .blog #hero #wrapper-blog #blog #single-header .meta a, .blog #hero #wrapper-blog #blog #blog-header .meta a {
           color: #3789d8; }
+        .blog #hero #wrapper-single #body #single-header .meta iframe, .blog #hero #wrapper-single #body #blog-header .meta iframe, .blog #hero #wrapper-single #blog #single-header .meta iframe, .blog #hero #wrapper-single #blog #blog-header .meta iframe, .blog #hero #wrapper-page #body #single-header .meta iframe, .blog #hero #wrapper-page #body #blog-header .meta iframe, .blog #hero #wrapper-page #blog #single-header .meta iframe, .blog #hero #wrapper-page #blog #blog-header .meta iframe, .blog #hero #wrapper-blog #body #single-header .meta iframe, .blog #hero #wrapper-blog #body #blog-header .meta iframe, .blog #hero #wrapper-blog #blog #single-header .meta iframe, .blog #hero #wrapper-blog #blog #blog-header .meta iframe {
+          float: right;
+          margin-top: 1px; }
+          .blog #hero #wrapper-single #body #single-header .meta iframe #widget, .blog #hero #wrapper-single #body #blog-header .meta iframe #widget, .blog #hero #wrapper-single #blog #single-header .meta iframe #widget, .blog #hero #wrapper-single #blog #blog-header .meta iframe #widget, .blog #hero #wrapper-page #body #single-header .meta iframe #widget, .blog #hero #wrapper-page #body #blog-header .meta iframe #widget, .blog #hero #wrapper-page #blog #single-header .meta iframe #widget, .blog #hero #wrapper-page #blog #blog-header .meta iframe #widget, .blog #hero #wrapper-blog #body #single-header .meta iframe #widget, .blog #hero #wrapper-blog #body #blog-header .meta iframe #widget, .blog #hero #wrapper-blog #blog #single-header .meta iframe #widget, .blog #hero #wrapper-blog #blog #blog-header .meta iframe #widget {
+            float: right; }
+      .blog #hero #wrapper-single #body p, .blog #hero #wrapper-single #blog p, .blog #hero #wrapper-page #body p, .blog #hero #wrapper-page #blog p, .blog #hero #wrapper-blog #body p, .blog #hero #wrapper-blog #blog p {
+        margin: 0 auto 15px; }
+      .blog #hero #wrapper-single #body .content, .blog #hero #wrapper-single #blog .content, .blog #hero #wrapper-page #body .content, .blog #hero #wrapper-page #blog .content, .blog #hero #wrapper-blog #body .content, .blog #hero #wrapper-blog #blog .content {
+        width: 95%;
+        margin: 0 0 0 0; }
   .blog #tweets div.left p {
     font-size: 16pt; } }
 @media all and (max-width: 875px) {

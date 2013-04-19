@@ -35,7 +35,7 @@ h1, h2, h3, h4 { margin: 0px 0 0 0; }
 }
 
 /*-- Structure Styles ---------------------------------------------------------------*/
-body { font-size: 100%; font-family: helvetica, arial, sans-serif; color: #353; -webkit-font-smoothing: antialiased; }
+body { font-size: 100%; font-family: helvetica, arial, sans-serif; color: #333; -webkit-font-smoothing: antialiased; }
 
 
 /*-- HTML5 Resets ---------------------------------------------------------------*/

@@ -1,3 +1,3 @@
 <div id="sidebar">
-	sidebar.php
+		<?php get_search_form(); ?>
 </div><!-- #sidebar -->

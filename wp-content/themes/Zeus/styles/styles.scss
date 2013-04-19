@@ -22,13 +22,38 @@ body { background-color: #111159; }
 		}
 	}
 }
+#body, #blog, #sidebar {
+	padding: 23px 10px;
+	box-sizing: border-box;
+}
 #sidebar {
-	width: 22%;
+	width: 24%;
 	min-height: 400px;
 	float: right;
 	background: #fff;
 	border-radius: 0 7px 7px 0;
-	padding: 23px 10px 0;
+
+	#search {
+
+		#s, #submit {
+			margin: 0;
+			padding: 5px 2px;
+			float: left;
+			font-size: 10pt;
+		}
+		#s {
+			width: 68%;
+			border: 1px solid #999;
+			margin-right: 5px;
+		}
+		#submit{
+			width: 25%;
+			padding: 5px 2px 6px;
+			color: #fff;
+			background-color: $dark-blue;
+			border: 1px solid darken($dark-blue, 10%);
+		}
+	}
 }
 
 /*-- Header --------------------------------------------------------------------------------*/
@@ -264,5 +289,5 @@ header {
 @import 'blog';
 
 
-
+/*-- Media Queries -------------------------------------------------------------------*/
 @import 'media-queries'
