@@ -20,3 +20,12 @@
 This class is responsible for making the hooks and filters and appending those to each dropdown menu. It Dynamically creates the menu hooks & placeholders. 
 
 Those can then be hooked into from the UberNav Class.
+
+
+
+##Methods 
+####UberWalker::createPlaceholder 
+1. Dynamically creates a name for the placeholder. 
+2. Creates an anonymous function that accepts the HTML to be passed to the placeholder.
+3. Returns the anonymous function for invocation in the HTML returned from UberWalker::start_lvl 
+

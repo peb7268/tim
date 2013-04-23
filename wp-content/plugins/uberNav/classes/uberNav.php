@@ -9,16 +9,7 @@ class uberNav {
 	public function __construct()
 	{
 		$this->walker = new UberWalker();
-		$this->walker->setHTML(array(
-			"boom1", "boom2", "boom3", "boom4"
-			)
-		);
-		add_action('placeholder_created', array($this, 'populate1'), 10, 1);
 		add_action('init', array($this, 'setUpPlugin'));
-	}
-	public function populate1($html)
-	{
-		return $html;
 	}
 	public function setUpPlugin()
 	{
@@ -33,7 +24,6 @@ class uberNav {
 	}
 	public function registerMenus( $menus = null )
 	{
-		//array($id, $desc)
 		$menus = array(
 			'uberNav' => 'Primary Navigation Menu ( uber style )'
 		);
@@ -77,9 +67,13 @@ class uberNav {
 		require PLUGIN_DIRECTORY.'lib/settings/page.php';
 		echo $form;
 	}
+	public function populateNav()
+	{
+		$this->walker->setHTML(array("placeholder1", "placeholder2", "placeholder3", "placeholder4"));
+	}
 	public function buildNav()
 	{
-		
+		$this->populateNav();	
 		wp_nav_menu( array( 'theme_location'=> 'uberNav', 
 							'container_id' 	=> 'navigation',
 							'after'			=> '<span></span>',
