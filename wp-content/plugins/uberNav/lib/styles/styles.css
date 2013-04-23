@@ -1,0 +1,67 @@
+/*-- Mixin --------------------------------------------------------------------------------*/
+#navigation {
+  width: 75%;
+  margin: 0;
+  float: left;
+  background-color: #3789d8;
+  border-top: 1px solid #77afe4;
+  border-bottom: 1px solid black; }
+  #navigation > .menu {
+    width: 77%;
+    float: right;
+    margin: 0; }
+    #navigation > .menu li {
+      position: relative;
+      float: left;
+      margin: 0 0.46083% 0 0; }
+      #navigation > .menu li.on a {
+        color: #012b42; }
+      #navigation > .menu li > a {
+        color: white;
+        font-size: 24pt;
+        font-family: 'Open Sans Condensed', sans-serif;
+        display: block;
+        padding: 11px 7px;
+        line-height: 1;
+        margin: 0 15px 0 0; }
+        #navigation > .menu li > a:hover {
+          color: #012b42; }
+      #navigation > .menu li.menu-parent-item:hover {
+        background-color: #8dbbe8; }
+      #navigation > .menu li.menu-parent-item a {
+        padding-right: 5px; }
+      #navigation > .menu li.menu-parent-item > span {
+        width: 0px;
+        border-right: 4px solid rgba(0, 0, 0, 0);
+        border-left: 5px solid rgba(0, 0, 0, 0);
+        display: block;
+        border-top: 7px solid #FFF;
+        position: absolute;
+        top: 50%;
+        right: 5px; }
+      #navigation > .menu li.menu-parent-item:hover > span {
+        border-top: 7px solid #012b42; }
+      #navigation > .menu li .sub-menu {
+        box-sizing: border-box;
+        display: none;
+        position: absolute;
+        background-color: #8dbbe8;
+        border-bottom: 7px solid #246fb8;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 7px 4px 10px 7px;
+        margin: 0; }
+        #navigation > .menu li .sub-menu li {
+          float: none; }
+          #navigation > .menu li .sub-menu li a {
+            padding: 3px 0;
+            display: block;
+            width: 100%;
+            color: white;
+            font-size: 16pt;
+            font-family: 'Open Sans Condensed', sans-serif; }
+            #navigation > .menu li .sub-menu li a:hover {
+              color: #012b42; }
+      #navigation > .menu li:hover .sub-menu {
+        display: block; }
