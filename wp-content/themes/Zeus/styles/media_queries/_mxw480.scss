@@ -1,0 +1,46 @@
+//iPhone landscape
+@media all and (max-width: 480px){
+  body {
+    //background: yellow;
+  }
+	#wrapper-single, #wrapper-page, #wrapper-blog {
+		padding-top: 166px;
+	}
+	header {
+		h1 {
+			font-size: 18pt;
+		}
+		#navigation {			
+			& > .menu { 
+					li{ 
+						& > a {
+						font-size: 22pt;
+					}
+				}
+			}
+		}
+	}
+	.page-template-blog-php {
+		#wrapper-blog {
+			#blog {
+				article {
+					margin: 0 auto 10px;
+				}
+				.post {
+					.img {
+						width: 100%;
+						float: none;
+						height: auto;
+						margin: 0 0 10px;
+					}
+					.content {
+						width: 100%;
+					}
+					h1 { 
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}

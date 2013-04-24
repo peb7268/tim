@@ -1,0 +1,75 @@
+//In between sizing
+@media all and (max-width: 570px){
+	header{
+		#navigation {
+			& > .menu { 
+				width: 100%;
+				& > li {
+					border-top: 1px solid lighten($light-blue, 7%);
+					border-bottom: 1px solid lighten($dark-blue, 5%);
+				}
+				li{ 
+					float: none;
+					width: 98%;
+					padding: 0 1%;
+
+					& > a {
+						font-size: 23pt;
+					}
+					&:first-child {
+						border-top: none;
+					}
+					&:last-child {
+						border-bottom: none;
+					}
+					&.menu-parent-item {
+						a {
+							float: left;
+						}
+						span {
+							position: static;
+							float: left;
+							margin-top: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#wrapper-single, #wrapper-page, #wrapper-blog {
+		padding-top: 169px;
+	}
+	#wrapper-home {
+		aside {
+			
+			ul {
+				li {
+					width: 100%;
+					float: none;
+					margin-bottom: 5px;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.page-template-blog-php {
+		#wrapper-blog {
+			#blog {
+				.post {
+					.img {
+						width: 32%;
+						height: auto;
+					}
+					.content {
+						width: 64%;
+					}
+					h1 { 
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}

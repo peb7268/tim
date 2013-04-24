@@ -4,7 +4,7 @@
 		<div id="single-header">
 			<h1 id="title"><?php the_title(); ?></h1>
 		</div><!-- #singel-header -->
-		<?php the_content(); ?>
+		<?php require 'framework/loops/generic.php'; ?>
 	</div><!-- #body -->
 </div><!-- #wrapper-single -->
 <?php get_sidebar(); ?>

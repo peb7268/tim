@@ -1,0 +1,21 @@
+#search {
+
+	#s, #submit {
+		margin: 0;
+		padding: 5px 2px;
+		float: left;
+		font-size: 10pt;
+	}
+	#s {
+		width: 68%;
+		border: 1px solid #999;
+		margin-right: 5px;
+	}
+	#submit{
+		width: 25%;
+		padding: 5px 2px 6px;
+		color: #fff;
+		background-color: $dark-blue;
+		border: 1px solid darken($dark-blue, 10%);
+	}
+}

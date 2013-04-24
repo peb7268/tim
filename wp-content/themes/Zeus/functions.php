@@ -4,27 +4,38 @@ define('JS_DIR', THEME_DIR.'/js');
 
 function initTheme()
 {
-	registerScripts();
-	enqueueScripts();
-	setupTheme();
+	add_action('wp_enqueue_scripts', 'setupTheme'); //Ensures page conditionals work
 }
-
+function removeDefaults()
+{
+	remove_filter ('the_content','wpautop');
+	remove_filter ('the_excerpt','wpautop');
+}
 function registerScripts()
 {
 	//wp_deregister_script('jquery');
 	//wp_register_script( $handle, $src, $deps = array, $ver = false, $in_footer = false )
-	wp_register_script('jquery', JS_DIR.'/lib/jquery.js', array(), '', false);
+	//wp_register_script('jquery', JS_DIR.'/lib/jquery.js', array(), '', false);
 	wp_register_script('home', JS_DIR.'/home.js', array(), false, false);
-	wp_register_script('global', JS_DIR.'/global.js', array(), false, false);
+	wp_register_script('twitter', JS_DIR.'/twitter.js', array('jquery'), false, true);
+	wp_register_script('webfonts', JS_DIR.'/webfonts.js', array(), false, false);
+	wp_register_script('global', JS_DIR.'/global.js', array('webfonts'), false, true);
 }
 function enqueueScripts()
 {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('home');
 	wp_enqueue_script('global');
+	wp_enqueue_script('twitter');
+	wp_enqueue_script('webfonts');
 }
 function setupTheme()
-{
+{	
+	removeDefaults();
+	registerScripts();
+	enqueueScripts();
+	//registerStickyPosts();
+
 	//Configure Featured Imaged
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 655, 0, false );						//Sets the default size

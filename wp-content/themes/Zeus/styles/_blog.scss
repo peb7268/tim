@@ -1,12 +1,48 @@
 .page-template-blog-php {
 	#wrapper-blog #blog {
 		.post {
+			h1 {
+				font-size: 17pt;
+				height: 50px;
+			}
+			.excerpt {
+				font-size: 15px;
+				// height: 35px;
+				margin: 0;
+				padding: 0;
+			}
 			.img {
 				float: left;
-				background: #333;
 				width: 29%;
 				height: 150px;
+				overflow: hidden;
+				@include thin-font-headline(85pt, #333);
+				font-weight: bold;
+				text-align: center;
+				
+				h2 {
+					letter-spacing: -12px;
+					margin: -9px 0 -6px 0;
+				}
+				span {
+					letter-spacing: -12px;
+					@include thin-font-headline(85pt, $dark-blue);
+					font-weight: bold;
+				}
 
+				p.subtitle {
+					font-family: 'helvetica', arial, sans-serif;
+					text-align: center;
+					font-size: 9pt;
+					font-weight: normal;
+				}
+				.frame {
+					background: #EEE;
+					padding: 5px 0;
+					border-radius: 7px;
+					border: 1px solid #999;
+					box-shadow: 0px 0px 8px #CCC;
+				}
 				img {
 					width: 100%;	
 					height: 100%;
@@ -18,6 +54,11 @@
 			.content {
 				float: right;
 				width: 70%;
+				@import 'elements/meta';
+
+				.meta {
+					margin: 10px 0 25px;
+				}
 			}
 		}
 	}

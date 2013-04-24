@@ -1,0 +1,27 @@
+//Fix some light font bugs
+@media all and (max-width: 1270px){
+  body { /* background: blue; */ }
+  #navigation { height: auto; }
+  .blog {
+
+		#hero {
+			
+			aside {
+				line-height: 1.1;
+				h2 {
+					padding: 0px 0 0 0;
+				}
+			}
+			@import 'single'	
+		};
+		#tweets div.left p {
+			font-size: 16pt;
+		}
+   }
+   #wrapper-single, #wrapper-page, #wrapper-blog {
+   		#blog {
+   			margin-left: 0;
+   			width: 100%;
+   		}
+   }
+}

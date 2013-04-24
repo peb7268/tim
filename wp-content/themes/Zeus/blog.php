@@ -10,12 +10,15 @@
 				<div class="img">
 					<?php
 						$size = 'featured-square';
+						$else = TRUE;
 						require "framework/elements/images/postThumbnail.php";
 					?>
 				</div>
 				<div class="content clearfix">
 					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<?php the_excerpt(); ?>
+					<p class="excerpt"><?php the_excerpt(); ?></p>
+					<?php $showTweets = false; ?>
+					<?php require 'framework/elements/posts/meta.php'; ?>
 				</div><!-- .content -->
 			</article>
 		<?php endwhile; endif; ?>

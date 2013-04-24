@@ -1,0 +1,24 @@
+.meta {
+	border: 1px solid darken($dark-blue, 10%);
+	color: #eee;
+	margin: 15px 0 25px;
+	padding: 3px 4px 1px;
+	background: $dark-blue;
+	height: 24px;
+	overflow: hidden;
+	max-width: 92%;
+	line-height: 1.5;
+
+	a {
+		color: $light-blue;
+	}
+
+	iframe {
+		float: right;
+		margin-top: 1px;
+
+		#widget {
+			float: right;
+		}
+	}
+}

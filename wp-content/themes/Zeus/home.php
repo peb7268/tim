@@ -11,7 +11,7 @@
 </section><!-- #hero -->
 
 <section id="tweets" class="clearfix">
-	<div class="left">
+	<div class="left clearfix">
 		<p class="headline">Follow Me</p>
 		<p><a href="#">@peb7268</a></p>
 	</div>

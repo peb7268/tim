@@ -1,0 +1,61 @@
+//ipad / tablet
+@media all and (max-width: 768px){
+  body { /* background: red; */ }
+  #wrapper { position: relative; }
+ .blog {
+	  #tweets {
+	  	height: auto;
+	   	overflow: visible;
+		div.left, div.right {
+			float: none;
+			margin: 0 0 5px 0;
+		}
+		& div.left {
+			box-sizing: border-box;
+			padding: 9px 0 20px 40%;
+			width: 100%;
+			
+		}
+	  }
+  }
+
+  #wrapper-home {
+	width: 100%;
+	margin: 0 0 5px 0;
+
+  	aside {
+  		width: 100%;
+  		float: none;
+		overflow: hidden;
+
+  		ul {
+
+  			li {
+			margin: 0 1% 0 0;
+			height: auto;
+			width: 30%;
+			float: left;
+			text-align: center;
+  				img {
+  					width: 100%;
+  					max-width: 100%;
+  				}
+
+  				&:nth-child(2) {
+					background: #FFF;
+					padding: 65px 19px 42px;
+  				}
+  				&:nth-child(3){
+					margin-right: 0;
+  				}
+  			}
+  		}
+  	}
+
+  	#blog-home {
+  		width: 100%;
+  		margin: 0 auto;
+  		float: none;
+  	}
+  }
+}

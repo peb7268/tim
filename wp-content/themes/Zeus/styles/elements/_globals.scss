@@ -1,0 +1,27 @@
+body { background-color: #111159; }
+#wrapper { width: 100%; max-width: percentage(960px / 1275px); margin: 40px auto 7px; }
+#body, #blog, #sidebar {
+	padding: 23px 10px;
+	box-sizing: border-box;
+}
+#sidebar {
+	width: 24%;
+	min-height: 400px;
+	float: right;
+	background: #fff;
+	border-radius: 0 7px 7px 0;
+	@import 'elements/search';
+}
+#navigation-footer {
+	display: block;
+	margin: 0 auto 40px;
+	width: 50%;
+	
+	li {
+		float: left;
+		margin: 0 2% 0 0;
+		a {
+			color: $light-blue;
+		}
+	}
+}
