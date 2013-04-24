@@ -1,8 +1,6 @@
 #navigation {
 	width: 75%;
 	margin: 0;
-	//height: 55px;
-	//overflow: hidden;
 	float: left;
 	background-color: $light-blue;
 	border-top: 1px solid lighten($light-blue, 15%);
@@ -17,6 +15,10 @@
 			position: relative;
 			float: left;
 			margin: 0 percentage(3px / 651px) 0 0;
+			&:hover {
+				z-index: 1000;
+				background-color: lighten(desaturate($light-blue, 1%), 20%);
+			}
 			&.on a { color: $dark-blue; }
 			& > a {
 				@include thin-font-headline(24pt, #fff);
@@ -31,8 +33,6 @@
 			}
 			//Parent li styling
 			&.menu-parent-item {
-				&:hover { background-color: lighten(desaturate($light-blue, 1%), 20%); }
-
 				a {
 					padding-right: 5px;
 				}

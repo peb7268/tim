@@ -48,10 +48,8 @@ class uberNav {
 		wp_enqueue_script( 'nav' );
 		wp_enqueue_style( 'uberStyles' );
 	}
-	//abstract this methods members to their own files
 	public function registerSettingsScreen()
 	{
-		//add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position )
 		add_menu_page('uberNav Plugin Settings', 'uberNav Settings', 'administrator', __FILE__, array($this, 'uberNav_settings_page'), get_stylesheet_directory_uri('stylesheet_directory')."/images/media-button-other.gif");
 
 		add_action( 'admin_init', array($this, 'register_uberNav_settings' ));

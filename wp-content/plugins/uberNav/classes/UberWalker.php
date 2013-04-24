@@ -31,10 +31,16 @@ class UberWalker extends Walker_Nav_Menu {
 	}
 	public function createPlaceHolder()
 	{
-		$placeholder  	= placeholder.self::$count;
+		//placeholder1, placeholder2, ect..
+		$placeholder  	= 'placeholder'.self::$count;
+		//holds $placeholder1, $placeholder2, ect.. which are anonymous functions
 		$$placeholder 	= function( $html = '' ){
 			return $html;
 		};
+		// echo "\$placeholder is: $placeholder <br>And<br>";
+		// echo "\$$placeholder is: <pre style='color: #eee;'>"; 
+		// var_dump( $$placeholder );
+		// echo "</pre><br>";
 		return $$placeholder;
 	}
 
@@ -97,7 +103,6 @@ class UberWalker extends Walker_Nav_Menu {
 		$indent 	 	= str_repeat("\t", $depth);
 
 		$elem 			= "\n$indent<ul class=\"sub-menu\">".$placeholder($html)."\n";
-		
 		$output 		.= $elem;
 	}
 	function end_lvl( &$output, $depth = 0, $args = array() ) 
