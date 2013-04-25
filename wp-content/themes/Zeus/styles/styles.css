@@ -496,8 +496,7 @@ header {
     float: none;
     width: 100%;
     border-radius: 0;
-    margin: 0px auto 10px;
-    padding-top: 64px; }
+    margin: 0px auto 10px; }
     #wrapper-single #blog, #wrapper-page #blog, #wrapper-blog #blog {
       width: 100%;
       margin: 0;
@@ -512,6 +511,12 @@ header {
   #navigation-footer {
     width: 53%; } }
 @media all and (max-width: 949px) {
+  #navigation {
+    display: none; }
+
+  header .navigation {
+    display: block; }
+
   .blog #hero {
     height: auto; }
     .blog #hero aside {
@@ -563,14 +568,16 @@ header {
     float: none;
     width: 100%;
     border-radius: 0;
-    margin: 0px auto 10px;
-    padding-top: 118px; }
+    margin: 0px auto 10px; }
     #wrapper-single #blog, #wrapper-page #blog, #wrapper-blog #blog {
       width: 100%;
       margin: 0; } }
 @media all and (max-width: 768px) {
   body {
     /* background: red; */ }
+
+  #navigation > .menu li .sub-menu {
+    top: 51px; }
 
   #wrapper {
     position: relative; }
@@ -634,9 +641,6 @@ header {
         float: left;
         margin-top: 25px; }
 
-  #wrapper-single, #wrapper-page, #wrapper-blog {
-    padding-top: 169px; }
-
   #wrapper-home aside ul li {
     width: 100%;
     float: none;
@@ -652,9 +656,6 @@ header {
   .page-template-blog-php #wrapper-blog #blog .post h1 {
     height: auto; } }
 @media all and (max-width: 480px) {
-  #wrapper-single, #wrapper-page, #wrapper-blog {
-    padding-top: 166px; }
-
   header h1 {
     font-size: 18pt; }
   header #navigation > .menu li > a {

@@ -1,6 +1,15 @@
 //ipad / tablet
 @media all and (max-width: 768px){
   body { /* background: red; */ }
+  #navigation {
+    & > .menu {
+      li {
+        .sub-menu {
+          top: 51px;
+        }
+      }
+    }
+  }
   #wrapper { position: relative; }
  .blog {
 	  #tweets {
