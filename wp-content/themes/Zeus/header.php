@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>Page Title</title>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" title="no title" charset="utf-8">
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>

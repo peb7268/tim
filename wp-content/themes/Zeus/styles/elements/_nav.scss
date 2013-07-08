@@ -1,32 +1,121 @@
-#navigation {
-	width: 75%;
-	margin: 0;
-	height: 55px;
-	overflow: hidden;
-	float: left;
+//Shown when responsive styles kick in under 949
+.navigation {
+	display: none;
+	padding: 4px 0;
+	@include thin-font-headline(39pt, #fff);
 	background-color: $light-blue;
 	border-top: 1px solid lighten($light-blue, 15%);
 	border-bottom: 1px solid darken($dark-blue, 70%);
+	width: 100%;
+	margin: 0;
+	float: left;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	a {
+		@include thin-font-headline(39pt, #fff);
+		padding: 0 2%;
+		display: block;
+		float: left;
+		margin-right: 5px;
+		line-height: 0.7;
+	}
+	span {
+		font-size: 24pt;
+		vertical-align: middle;
+		display: block;
+		float: left;
+		width: 80%;
+		line-height: 1.4;
+		padding-bottom: 2px;
+	}
+}
+
+//Default Nav Styling
+#navigation {
+	@include thin-font-headline(39pt, #fff);
+	background-color: $light-blue;
+	border-top: 1px solid lighten($light-blue, 15%);
+	border-bottom: 1px solid darken($dark-blue, 70%);
+	width: 75%;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 2%;
+	box-sizing: border-box;
 
 	& > .menu  {
-		//display: none;
-		width: 77%;
-		float: right;
+		// width: 77%;
+		width: 100%;
+		float: left;
 		margin: 12px 0 15px;
 
 		li {
 			float: left;
 			margin: 0 percentage(3px / 651px) 0 0;
+			position: relative;
 
 			a {
-				@include thin-font-headline(24pt, #fff);
+				@include thin-font-headline(20pt, #fff);
 				display: block;
-				padding: 0;
 				line-height: 1;
 				margin: 0 25px 0 0;
 				
 				&:hover {
 					color: $hero-3;
+				}
+			}
+			& .sub-menu {
+				display: none;
+				position: absolute;
+				padding: 20px 0px 0;
+				//background: #fafafa;
+
+				li {
+					float: none;
+					margin: 0;
+					padding: 0;
+					width: 100%;
+					display: block;
+
+					a {
+						border-top: 0;
+						border-right: 1px solid #ccc;
+						border-left: 1px solid #ccc;
+						font-size: 14pt;
+						padding: 4px 7px 7px;
+						border-bottom: 1px solid #CCC;
+						display: block;
+						width: 100%;
+						box-sizing: border-box;
+
+						background-color: #fafafa;
+						background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#eeeeee));
+						background-image: -webkit-linear-gradient(top, #fafafa, #eeeeee);
+						background-image: -moz-linear-gradient(top, #fafafa, #eeeeee);
+						background-image: -o-linear-gradient(top, #fafafa, #eeeeee);
+						background-image: -ms-linear-gradient(top, #fafafa, #eeeeee);
+						background-image: linear-gradient(top, #fafafa, #eeeeee);
+						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fafafa', EndColorStr='#eeeeee');
+						
+						&:hover {
+							background-image: none;
+							background: #fff;
+						}
+					}
+					&:last-child a{
+						border-bottom: 0;
+						border-radius: 0 0 8px 8px;
+						padding-bottom: 10px;
+					}
+				}
+			}
+
+			&:hover {
+
+				& .sub-menu {
+					//display: block;
 				}
 			}
 		}

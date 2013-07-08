@@ -1,0 +1,24 @@
+#twitter-widget-0 {
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.stream .tweet time {
+  display: none; }
+.stream .tweet .e-entry-content {
+  width: 100%; }
+  .stream .tweet .e-entry-content p.e-entry-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 21pt;
+    overflow: auto;
+    line-height: 1.4;
+    color: #fff; }
+    .stream .tweet .e-entry-content p.e-entry-title a {
+      font-size: 11pt; }
+
+.header, .tweet-actions, a.u-url.profile img {
+  display: none; }
+
+.var-chromeless .tweet {
+  padding: 0; }

@@ -27,9 +27,19 @@
 			}
 			@import 'single'	
 		};
-		#tweets div.right p {
-			font-size: 21pt;
-			line-height: 1.2;
+		#tweets div.right {
+			p {
+				font-size: 21pt;
+				line-height: 1.2;
+			}
+			#twitter-widget-0, iframe {
+				&.fw {
+					height: auto;
+					width: 95%;
+					overflow: visible;
+					margin: 0 auto;
+				}
+			}
 		}
 		#tweets div.left p {
 			font-size: 16pt;

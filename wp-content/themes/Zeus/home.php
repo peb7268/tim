@@ -16,7 +16,7 @@
 		<p><a href="#">@peb7268</a></p>
 	</div>
 		<div class="right">
-			<p>Living for someone else's approval is the same as #idolotry to God.</p>
+			<a class="twitter-timeline" href="https://twitter.com/peb7268" data-widget-id="352852392930340865" data-chrome="nofooter noheader transparent noborders noscrollbar" data-tweet-limit='1' width="100%"></a>
 	</div>
 </section><!-- #tweets -->
 

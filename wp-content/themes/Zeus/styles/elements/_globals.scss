@@ -1,4 +1,8 @@
-body { background-color: #111159; }
+body { background-color: #111159; color: #333; font-size: 11pt; }
+h4 { 
+	font-weight: bold;
+	font-size: 14pt;
+}
 #wrapper { width: 100%; max-width: percentage(960px / 1275px); margin: 40px auto 7px; }
 #body, #blog, #sidebar {
 	padding: 23px 10px;
@@ -11,6 +15,10 @@ body { background-color: #111159; }
 	background: #fff;
 	border-radius: 0 7px 7px 0;
 	@import 'elements/search';
+
+	.block {
+		margin-bottom: 10px;
+	}
 }
 #navigation-footer {
 	display: block;

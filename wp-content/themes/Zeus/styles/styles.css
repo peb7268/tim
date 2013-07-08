@@ -2,7 +2,13 @@
 /*-- Mixin --------------------------------------------------------------------------------*/
 /*-- Globals --------------------------------------------------------------------------------*/
 body {
-  background-color: #111159; }
+  background-color: #111159;
+  color: #333;
+  font-size: 11pt; }
+
+h4 {
+  font-weight: bold;
+  font-size: 14pt; }
 
 #wrapper {
   width: 100%;
@@ -34,6 +40,8 @@ body {
     color: #fff;
     background-color: #012b42;
     border: 1px solid #000a10; }
+  #sidebar .block {
+    margin-bottom: 10px; }
 
 #navigation-footer {
   display: block;
@@ -59,6 +67,103 @@ header {
     float: right; }
 
 /*-- Nav Menu --------------------------------------------------------------------------------*/
+.navigation {
+  display: none;
+  padding: 4px 0;
+  color: white;
+  font-size: 39pt;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #3789d8;
+  border-top: 1px solid #77afe4;
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin: 0;
+  float: left; }
+  .navigation:hover {
+    cursor: pointer; }
+  .navigation a {
+    color: white;
+    font-size: 39pt;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 0 2%;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    line-height: 0.7; }
+  .navigation span {
+    font-size: 24pt;
+    vertical-align: middle;
+    display: block;
+    float: left;
+    width: 80%;
+    line-height: 1.4;
+    padding-bottom: 2px; }
+
+#navigation {
+  color: white;
+  font-size: 39pt;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #3789d8;
+  border-top: 1px solid #77afe4;
+  border-bottom: 1px solid black;
+  width: 75%;
+  float: left;
+  margin: 0 0 0 0;
+  padding: 0 0 0 2%;
+  box-sizing: border-box; }
+  #navigation > .menu {
+    width: 100%;
+    float: left;
+    margin: 12px 0 15px; }
+    #navigation > .menu li {
+      float: left;
+      margin: 0 0.46083% 0 0;
+      position: relative; }
+      #navigation > .menu li a {
+        color: white;
+        font-size: 20pt;
+        font-family: 'Open Sans Condensed', sans-serif;
+        display: block;
+        line-height: 1;
+        margin: 0 25px 0 0; }
+        #navigation > .menu li a:hover {
+          color: #ff5f2e; }
+      #navigation > .menu li .sub-menu {
+        display: none;
+        position: absolute;
+        padding: 20px 0px 0; }
+        #navigation > .menu li .sub-menu li {
+          float: none;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          display: block; }
+          #navigation > .menu li .sub-menu li a {
+            border-top: 0;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            font-size: 14pt;
+            padding: 4px 7px 7px;
+            border-bottom: 1px solid #CCC;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #fafafa;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#eeeeee));
+            background-image: -webkit-linear-gradient(top, #fafafa, #eeeeee);
+            background-image: -moz-linear-gradient(top, #fafafa, #eeeeee);
+            background-image: -o-linear-gradient(top, #fafafa, #eeeeee);
+            background-image: -ms-linear-gradient(top, #fafafa, #eeeeee);
+            background-image: linear-gradient(top, #fafafa, #eeeeee);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fafafa', EndColorStr='#eeeeee'); }
+            #navigation > .menu li .sub-menu li a:hover {
+              background-image: none;
+              background: #fff; }
+          #navigation > .menu li .sub-menu li:last-child a {
+            border-bottom: 0;
+            border-radius: 0 0 8px 8px;
+            padding-bottom: 10px; }
+
 /*-- Page Specific Styles ------------------------------------------------------------*/
 .home #hero {
   height: 200px;
@@ -198,18 +303,26 @@ header {
       font-family: 'Open Sans Condensed', sans-serif;
       background-color: #00ccc9;
       width: 71.7%;
+      overflow: hidden;
       margin: 0 0 0 1%;
       min-height: 80px;
       padding: 5px 2%; }
       .home #tweets div.right p {
         line-height: 1; }
+      .home #tweets div.right #twitter-widget-0, .home #tweets div.right iframe {
+        display: none; }
+        .home #tweets div.right #twitter-widget-0.fw, .home #tweets div.right iframe.fw {
+          height: 75px;
+          overflow: hidden; }
 
 #wrapper-home, #wrapper-blog {
-  width: 99%;
+  width: 100%;
   margin: 0 auto; }
   #wrapper-home > aside, #wrapper-home #blog-home, #wrapper-blog > aside, #wrapper-blog #blog-home {
     margin: 0px auto 5px;
     float: left; }
+  #wrapper-home #blog-home, #wrapper-blog #blog-home {
+    margin-left: 1%; }
   #wrapper-home > aside, #wrapper-blog > aside {
     width: 23%; }
     #wrapper-home > aside h2, #wrapper-blog > aside h2 {
@@ -231,18 +344,16 @@ header {
       font-size: 24pt; }
     #wrapper-home > aside > ul li, #wrapper-blog > aside > ul li {
       margin: 0 0 5px 0;
-      height: 275px;
       width: 100%;
       background: #fff;
       text-align: center;
-      min-height: 80px; }
+      min-height: 103px; }
       #wrapper-home > aside > ul li img, #wrapper-blog > aside > ul li img {
         display: block;
         width: 100%;
         max-width: 295px; }
   #wrapper-home #blog-home, #wrapper-home #blog, #wrapper-blog #blog-home, #wrapper-blog #blog {
-    width: 76%;
-    margin-left: 1%; }
+    width: 76%; }
     #wrapper-home #blog-home article, #wrapper-home #blog article, #wrapper-blog #blog-home article, #wrapper-blog #blog article {
       background-color: #fff;
       padding: 5px;
@@ -267,7 +378,7 @@ header {
     #wrapper-home #blog article.post h1 a, #wrapper-blog #blog article.post h1 a {
       color: #012b42; }
   #wrapper-home #blog, #wrapper-blog #blog {
-    width: 99%; }
+    width: 100%; }
 
 #wrapper-single, #wrapper-page, #wrapper-blog {
   width: 75%;
@@ -283,6 +394,8 @@ header {
       font-family: 'Open Sans Condensed', sans-serif;
       margin: 0 0 5px 0; }
     #wrapper-single #body #single-header #banner img, #wrapper-single #body #blog-header #banner img, #wrapper-single #blog #single-header #banner img, #wrapper-single #blog #blog-header #banner img, #wrapper-page #body #single-header #banner img, #wrapper-page #body #blog-header #banner img, #wrapper-page #blog #single-header #banner img, #wrapper-page #blog #blog-header #banner img, #wrapper-blog #body #single-header #banner img, #wrapper-blog #body #blog-header #banner img, #wrapper-blog #blog #single-header #banner img, #wrapper-blog #blog #blog-header #banner img {
+      display: block;
+      margin: 0 auto;
       max-width: 100%; }
     #wrapper-single #body #single-header .meta, #wrapper-single #body #blog-header .meta, #wrapper-single #blog #single-header .meta, #wrapper-single #blog #blog-header .meta, #wrapper-page #body #single-header .meta, #wrapper-page #body #blog-header .meta, #wrapper-page #blog #single-header .meta, #wrapper-page #blog #blog-header .meta, #wrapper-blog #body #single-header .meta, #wrapper-blog #body #blog-header .meta, #wrapper-blog #blog #single-header .meta, #wrapper-blog #blog #blog-header .meta {
       border: 1px solid #000a10;
@@ -301,8 +414,8 @@ header {
         margin-top: 1px; }
         #wrapper-single #body #single-header .meta iframe #widget, #wrapper-single #body #blog-header .meta iframe #widget, #wrapper-single #blog #single-header .meta iframe #widget, #wrapper-single #blog #blog-header .meta iframe #widget, #wrapper-page #body #single-header .meta iframe #widget, #wrapper-page #body #blog-header .meta iframe #widget, #wrapper-page #blog #single-header .meta iframe #widget, #wrapper-page #blog #blog-header .meta iframe #widget, #wrapper-blog #body #single-header .meta iframe #widget, #wrapper-blog #body #blog-header .meta iframe #widget, #wrapper-blog #blog #single-header .meta iframe #widget, #wrapper-blog #blog #blog-header .meta iframe #widget {
           float: right; }
-    #wrapper-single #body p, #wrapper-single #blog p, #wrapper-page #body p, #wrapper-page #blog p, #wrapper-blog #body p, #wrapper-blog #blog p {
-      margin: 0 auto 15px; }
+    #wrapper-single #body p, #wrapper-single #body .syntaxhighlighter, #wrapper-single #blog p, #wrapper-single #blog .syntaxhighlighter, #wrapper-page #body p, #wrapper-page #body .syntaxhighlighter, #wrapper-page #blog p, #wrapper-page #blog .syntaxhighlighter, #wrapper-blog #body p, #wrapper-blog #body .syntaxhighlighter, #wrapper-blog #blog p, #wrapper-blog #blog .syntaxhighlighter {
+      margin: 0 auto 25px; }
     #wrapper-single #body .content, #wrapper-single #blog .content, #wrapper-page #body .content, #wrapper-page #blog .content, #wrapper-blog #body .content, #wrapper-blog #blog .content {
       width: 95%;
       margin: 0 0 0 0; }
@@ -312,7 +425,7 @@ header {
 
 .page-template-blog-php #wrapper-blog #blog .post h1 {
   font-size: 17pt;
-  height: 50px; }
+  max-height: 72px; }
 .page-template-blog-php #wrapper-blog #blog .post .excerpt {
   font-size: 15px;
   margin: 0;
@@ -401,6 +514,8 @@ header {
         font-family: 'Open Sans Condensed', sans-serif;
         margin: 0 0 5px 0; }
       .blog #hero #wrapper-single #body #single-header #banner img, .blog #hero #wrapper-single #body #blog-header #banner img, .blog #hero #wrapper-single #blog #single-header #banner img, .blog #hero #wrapper-single #blog #blog-header #banner img, .blog #hero #wrapper-page #body #single-header #banner img, .blog #hero #wrapper-page #body #blog-header #banner img, .blog #hero #wrapper-page #blog #single-header #banner img, .blog #hero #wrapper-page #blog #blog-header #banner img, .blog #hero #wrapper-blog #body #single-header #banner img, .blog #hero #wrapper-blog #body #blog-header #banner img, .blog #hero #wrapper-blog #blog #single-header #banner img, .blog #hero #wrapper-blog #blog #blog-header #banner img {
+        display: block;
+        margin: 0 auto;
         max-width: 100%; }
       .blog #hero #wrapper-single #body #single-header .meta, .blog #hero #wrapper-single #body #blog-header .meta, .blog #hero #wrapper-single #blog #single-header .meta, .blog #hero #wrapper-single #blog #blog-header .meta, .blog #hero #wrapper-page #body #single-header .meta, .blog #hero #wrapper-page #body #blog-header .meta, .blog #hero #wrapper-page #blog #single-header .meta, .blog #hero #wrapper-page #blog #blog-header .meta, .blog #hero #wrapper-blog #body #single-header .meta, .blog #hero #wrapper-blog #body #blog-header .meta, .blog #hero #wrapper-blog #blog #single-header .meta, .blog #hero #wrapper-blog #blog #blog-header .meta {
         border: 1px solid #000a10;
@@ -419,8 +534,8 @@ header {
           margin-top: 1px; }
           .blog #hero #wrapper-single #body #single-header .meta iframe #widget, .blog #hero #wrapper-single #body #blog-header .meta iframe #widget, .blog #hero #wrapper-single #blog #single-header .meta iframe #widget, .blog #hero #wrapper-single #blog #blog-header .meta iframe #widget, .blog #hero #wrapper-page #body #single-header .meta iframe #widget, .blog #hero #wrapper-page #body #blog-header .meta iframe #widget, .blog #hero #wrapper-page #blog #single-header .meta iframe #widget, .blog #hero #wrapper-page #blog #blog-header .meta iframe #widget, .blog #hero #wrapper-blog #body #single-header .meta iframe #widget, .blog #hero #wrapper-blog #body #blog-header .meta iframe #widget, .blog #hero #wrapper-blog #blog #single-header .meta iframe #widget, .blog #hero #wrapper-blog #blog #blog-header .meta iframe #widget {
             float: right; }
-      .blog #hero #wrapper-single #body p, .blog #hero #wrapper-single #blog p, .blog #hero #wrapper-page #body p, .blog #hero #wrapper-page #blog p, .blog #hero #wrapper-blog #body p, .blog #hero #wrapper-blog #blog p {
-        margin: 0 auto 15px; }
+      .blog #hero #wrapper-single #body p, .blog #hero #wrapper-single #body .syntaxhighlighter, .blog #hero #wrapper-single #blog p, .blog #hero #wrapper-single #blog .syntaxhighlighter, .blog #hero #wrapper-page #body p, .blog #hero #wrapper-page #body .syntaxhighlighter, .blog #hero #wrapper-page #blog p, .blog #hero #wrapper-page #blog .syntaxhighlighter, .blog #hero #wrapper-blog #body p, .blog #hero #wrapper-blog #body .syntaxhighlighter, .blog #hero #wrapper-blog #blog p, .blog #hero #wrapper-blog #blog .syntaxhighlighter {
+        margin: 0 auto 25px; }
       .blog #hero #wrapper-single #body .content, .blog #hero #wrapper-single #blog .content, .blog #hero #wrapper-page #body .content, .blog #hero #wrapper-page #blog .content, .blog #hero #wrapper-blog #body .content, .blog #hero #wrapper-blog #blog .content {
         width: 95%;
         margin: 0 0 0 0; }
@@ -461,6 +576,8 @@ header {
         font-family: 'Open Sans Condensed', sans-serif;
         margin: 0 0 5px 0; }
       .blog #hero #wrapper-single #body #single-header #banner img, .blog #hero #wrapper-single #body #blog-header #banner img, .blog #hero #wrapper-single #blog #single-header #banner img, .blog #hero #wrapper-single #blog #blog-header #banner img, .blog #hero #wrapper-page #body #single-header #banner img, .blog #hero #wrapper-page #body #blog-header #banner img, .blog #hero #wrapper-page #blog #single-header #banner img, .blog #hero #wrapper-page #blog #blog-header #banner img, .blog #hero #wrapper-blog #body #single-header #banner img, .blog #hero #wrapper-blog #body #blog-header #banner img, .blog #hero #wrapper-blog #blog #single-header #banner img, .blog #hero #wrapper-blog #blog #blog-header #banner img {
+        display: block;
+        margin: 0 auto;
         max-width: 100%; }
       .blog #hero #wrapper-single #body #single-header .meta, .blog #hero #wrapper-single #body #blog-header .meta, .blog #hero #wrapper-single #blog #single-header .meta, .blog #hero #wrapper-single #blog #blog-header .meta, .blog #hero #wrapper-page #body #single-header .meta, .blog #hero #wrapper-page #body #blog-header .meta, .blog #hero #wrapper-page #blog #single-header .meta, .blog #hero #wrapper-page #blog #blog-header .meta, .blog #hero #wrapper-blog #body #single-header .meta, .blog #hero #wrapper-blog #body #blog-header .meta, .blog #hero #wrapper-blog #blog #single-header .meta, .blog #hero #wrapper-blog #blog #blog-header .meta {
         border: 1px solid #000a10;
@@ -479,8 +596,8 @@ header {
           margin-top: 1px; }
           .blog #hero #wrapper-single #body #single-header .meta iframe #widget, .blog #hero #wrapper-single #body #blog-header .meta iframe #widget, .blog #hero #wrapper-single #blog #single-header .meta iframe #widget, .blog #hero #wrapper-single #blog #blog-header .meta iframe #widget, .blog #hero #wrapper-page #body #single-header .meta iframe #widget, .blog #hero #wrapper-page #body #blog-header .meta iframe #widget, .blog #hero #wrapper-page #blog #single-header .meta iframe #widget, .blog #hero #wrapper-page #blog #blog-header .meta iframe #widget, .blog #hero #wrapper-blog #body #single-header .meta iframe #widget, .blog #hero #wrapper-blog #body #blog-header .meta iframe #widget, .blog #hero #wrapper-blog #blog #single-header .meta iframe #widget, .blog #hero #wrapper-blog #blog #blog-header .meta iframe #widget {
             float: right; }
-      .blog #hero #wrapper-single #body p, .blog #hero #wrapper-single #blog p, .blog #hero #wrapper-page #body p, .blog #hero #wrapper-page #blog p, .blog #hero #wrapper-blog #body p, .blog #hero #wrapper-blog #blog p {
-        margin: 0 auto 15px; }
+      .blog #hero #wrapper-single #body p, .blog #hero #wrapper-single #body .syntaxhighlighter, .blog #hero #wrapper-single #blog p, .blog #hero #wrapper-single #blog .syntaxhighlighter, .blog #hero #wrapper-page #body p, .blog #hero #wrapper-page #body .syntaxhighlighter, .blog #hero #wrapper-page #blog p, .blog #hero #wrapper-page #blog .syntaxhighlighter, .blog #hero #wrapper-blog #body p, .blog #hero #wrapper-blog #body .syntaxhighlighter, .blog #hero #wrapper-blog #blog p, .blog #hero #wrapper-blog #blog .syntaxhighlighter {
+        margin: 0 auto 25px; }
       .blog #hero #wrapper-single #body .content, .blog #hero #wrapper-single #blog .content, .blog #hero #wrapper-page #body .content, .blog #hero #wrapper-page #blog .content, .blog #hero #wrapper-blog #body .content, .blog #hero #wrapper-blog #blog .content {
         width: 95%;
         margin: 0 0 0 0; }
@@ -489,6 +606,11 @@ header {
   .blog #tweets div.right p {
     font-size: 21pt;
     line-height: 1.2; }
+  .blog #tweets div.right #twitter-widget-0.fw, .blog #tweets div.right iframe.fw {
+    height: auto;
+    width: 95%;
+    overflow: visible;
+    margin: 0 auto; }
   .blog #tweets div.left p {
     font-size: 16pt; }
 
@@ -611,7 +733,7 @@ header {
           max-width: 100%; }
         #wrapper-home aside ul li:nth-child(2) {
           background: #FFF;
-          padding: 65px 19px 42px; }
+          padding: 14% 4% 0%; }
         #wrapper-home aside ul li:nth-child(3) {
           margin-right: 0; }
     #wrapper-home #blog-home {
@@ -658,8 +780,34 @@ header {
 @media all and (max-width: 480px) {
   header h1 {
     font-size: 18pt; }
-  header #navigation > .menu li > a {
+  header #navigation > .menu {
+    margin: 0; }
+    header #navigation > .menu li > a {
+      padding: 5px 0;
+      font-size: 22pt;
+      line-height: 1.2; }
+
+  .blog #hero aside h2 {
     font-size: 22pt; }
+  .blog #hero ul li:nth-child(1),
+  .blog #hero ul li:nth-child(2),
+  .blog #hero ul li:nth-child(3) {
+    padding: 5px 0; }
+    .blog #hero ul li:nth-child(1) a,
+    .blog #hero ul li:nth-child(2) a,
+    .blog #hero ul li:nth-child(3) a {
+      font-size: 22pt; }
+    .blog #hero ul li:nth-child(1) p,
+    .blog #hero ul li:nth-child(2) p,
+    .blog #hero ul li:nth-child(3) p {
+      padding: 0 7px;
+      margin: 0; }
+      .blog #hero ul li:nth-child(1) p a,
+      .blog #hero ul li:nth-child(2) p a,
+      .blog #hero ul li:nth-child(3) p a {
+        font-size: 10pt; }
+  .blog #hero ul li:nth-child(1) {
+    background-position: -297px -50px; }
 
   .page-template-blog-php #wrapper-blog #blog article {
     margin: 0 auto 10px; }
@@ -671,7 +819,11 @@ header {
   .page-template-blog-php #wrapper-blog #blog .post .content {
     width: 100%; }
   .page-template-blog-php #wrapper-blog #blog .post h1 {
-    height: auto; } }
-@media all and (max-width: 320px) {
-  body {
-    background: yellow; } }
+    height: auto; }
+
+  #wrapper-home #blog-home article {
+    padding: 5px 5px 15px; }
+    #wrapper-home #blog-home article .post {
+      box-sizing: border-box; }
+      #wrapper-home #blog-home article .post h1 {
+        font-size: 17pt; } }

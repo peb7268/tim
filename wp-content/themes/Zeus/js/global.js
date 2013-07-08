@@ -33,4 +33,26 @@
 		var sel1 = ($('#body').length > 0) ? '#body' : '#blog';
 		$( sel1 + ', #sidebar', '#wrapper').equalize();		
 	});
+
+	//Nav
+	var nav_link 	= $('div.navigation');
+	var	nav 		= $('#navigation');
+
+	nav_link.on('click', toggleNav);
+	function toggleNav(evt){
+		evt.preventDefault();
+		nav.slideToggle(150);
+	}
+
+	//Twitter-timeline sidebar
+	!function(d,s,id){
+		var js,fjs=d.getElementsByTagName(s)[0],
+		p=/^http:/.test(d.location)?'http':'https';
+		if(!d.getElementById(id)){
+			js=d.createElement(s);
+			js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);
+		}
+	}(document,"script","twitter-wjs");
+	
 }(jQuery));
